@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: netdisk-service-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.92.130:8848
+      config:
+        file-extension: yaml # 文件后缀名
+        shared-configs: # 共享配置
+          - dataId: shared-jwt.yaml

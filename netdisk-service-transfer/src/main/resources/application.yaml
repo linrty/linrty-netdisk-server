@@ -1,0 +1,21 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: netdisk-service-transfer # 服务名称
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 10240MB
+      max-request-size: 10240MB
+
+netdisk:
+  swagger:
+    title: 网盘传输服务接口文档
+    description: 网盘传输服务接口文档
+    package: top.linrty.netdisk.transfer.controller # 扫描的包路径
+  dbname: netdisk_transfer
+  storage-type: 0
+  local-storage-path: ./data
+

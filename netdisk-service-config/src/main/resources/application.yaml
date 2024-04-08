@@ -1,0 +1,14 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: netdisk-service-config # 服务名称
+  profiles:
+    active: dev
+
+netdisk:
+  swagger:
+    title: 系统配置接口文档
+    description: 系统配置接口文档
+    package: top.linrty.netdisk.config.controller # 扫描的包路径
+  dbname: netdisk_config

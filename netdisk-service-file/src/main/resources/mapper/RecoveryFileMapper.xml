@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.linrty.netdisk.file.mapper.RecoveryFileMapper">
+
+    <select id="selectRecoveryFileList" resultType="top.linrty.netdisk.file.domain.vo.RecoveryFileListVO">
+        SELECT * FROM recoveryfile a
+        LEFT JOIN userfile b ON a.user_file_id = b.user_file_id
+        left join file c on c.file_id = b.file_id
+        WHERE user_id = #{userId}
+    </select>
+</mapper>

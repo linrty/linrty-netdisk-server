@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.linrty.netdisk.user.mapper.UserMapper">
+
+    <insert id="insertUser" parameterType="top.linrty.netdisk.user.domain.po.UserBean" useGeneratedKeys="true" keyProperty="userId">
+        INSERT INTO user (user_id, username, salt, password,  telephone, sex, image_url, register_time, available)
+        VALUES (#{userId}, #{username},#{salt}, #{password}, #{telephone}, #{sex}, #{imageUrl}, #{registerTime}, 1);
+    </insert>
+
+    <insert id="insertUserRole">
+        INSERT INTO user_role (user_id, role_id)
+        VALUES (#{userId}, #{roleId});
+    </insert>
+
+    <select id="selectRoleListByUserId" resultType="top.linrty.netdisk.user.domain.po.Role">
+        select b.*
+        from user_role a
+        left join role b on b.role_id = a.role_id
+        where userId = #{userId}
+    </select>
+
+    <select id="selectSaltByTelephone" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT salt
+        FROM user
+        where telephone = #{telephone}
+    </select>
+
+    <select id="selectUserByTelephoneAndPassword" parameterType="java.lang.String"
+            resultType="top.linrty.netdisk.user.domain.po.UserBean">
+        select user_id
+        from user
+        where telephone = #{telephone}
+        AND password = #{password}
+    </select>
+
+</mapper>

@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: netdisk-service-user # 服务名称
+  profiles:
+    active: dev
+
+netdisk:
+  swagger:
+    title: 网盘用户服务接口文档
+    description: 网盘用户服务接口文档
+    package:  top.linrty.netdisk.user.controller # 扫描的包路径
+  dbname: netdisk_user
+
+
+

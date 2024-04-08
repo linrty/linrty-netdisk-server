@@ -1,0 +1,15 @@
+package top.linrty.netdisk.transfer.domain.dto;
+
+import lombok.Data;
+
+@Data
+// @Schema(name = "批量下载文件DTO",required = true)
+public class BatchDownloadFileDTO {
+    // @Schema(description="文件集合", required = true)
+    private String userFileIds;
+    // @Schema(description="批次号")
+    private String shareBatchNum;
+    // @Schema(description="提取码")
+    private String extractionCode;
+
+}

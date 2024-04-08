@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="netdisk-service-file" />
+        <module name="netdisk-service-config" />
+        <module name="netdisk-service-notice" />
+        <module name="netdisk-service-common" />
+        <module name="netdisk-service-user" />
+        <module name="netdisk-service-transfer" />
+        <module name="netdisk-service-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="net" target="17" />
+      <module name="netdisk-service-api" target="11" />
+      <module name="netdisk-service-gc" target="17" />
+      <module name="netdisk-service-share" target="11" />
+      <module name="netdisk-service-transport" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="net" options="-parameters" />
+      <module name="netdisk-service-api" options="-parameters" />
+      <module name="netdisk-service-common" options="-parameters" />
+      <module name="netdisk-service-config" options="-parameters" />
+      <module name="netdisk-service-file" options="-parameters" />
+      <module name="netdisk-service-gateway" options="-parameters" />
+      <module name="netdisk-service-gc" options="-parameters" />
+      <module name="netdisk-service-notice" options="-parameters" />
+      <module name="netdisk-service-share" options="-parameters" />
+      <module name="netdisk-service-transfer" options="-parameters" />
+      <module name="netdisk-service-transport" options="-parameters" />
+      <module name="netdisk-service-user" options="-parameters" />
+    </option>
+  </component>
+</project>

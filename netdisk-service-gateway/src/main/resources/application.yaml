@@ -1,0 +1,40 @@
+server:
+    port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user # 路由规则id，自定义，唯一
+          uri: lb://netdisk-service-user # 路由的目标服务，lb代表负载均衡，会从注册中心拉取服务列表
+          predicates: # 路由断言，判断当前请求是否符合当前规则，符合则路由到目标服务
+            - Path=/user/** # 这里是以请求路径作为判断规则
+        - id: notice
+          uri: lb://netdisk-service-notice
+          predicates:
+              - Path=/notice/**
+        - id: config
+          uri: lb://netdisk-service-config
+          predicates:
+              - Path=/param/**
+        - id: file
+          uri: lb://netdisk-service-file
+          predicates:
+              - Path=/file/**, /storage/**, /recoveryfile/**, /share/**
+        - id: transfer
+          uri: lb://netdisk-service-transfer
+          predicates:
+              - Path=/filetransfer/**
+netdisk:
+  auth:
+    excludePaths:
+      - /user/login
+      - /user/register
+      - /notice/**
+      - /doc.html
+      - /doc.html*
+      - /webjars/**
+      - /**/swagger-resources/**
+      - /**/swagger-ui.html
+      - /**/v2/api-docs
+      - /img.icons/**
+      - /filetransfer/preview**

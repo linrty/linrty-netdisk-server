@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.linrty.netdisk.transfer.mapper.UploadTaskDetailMapper">
+    <select id="selectUploadedChunkNumList" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select chunk_number from upload_task_detail
+        where identifier = #{identifier}
+        order by chunk_number asc
+    </select>
+
+</mapper>

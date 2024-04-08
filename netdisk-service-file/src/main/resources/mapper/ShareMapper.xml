@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.linrty.netdisk.file.mapper.ShareMapper">
+
+    <select id="selectShareList" resultType="top.linrty.netdisk.file.domain.vo.ShareListVO">
+        SELECT * FROM share a
+        LEFT JOIN sharefile b ON b.share_batch_num = a.share_batch_num
+        LEFT JOIN userfile c ON c.user_file_id = b.user_file_id
+        LEFT JOIN file d ON d.file_id = c.file_id
+        WHERE share_file_path = #{shareFilePath}
+        <if test="shareBatchNum != null">
+            AND a.share_batch_num = #{shareBatchNum}
+        </if>
+        AND c.user_id = #{userId}
+        order BY share_time desc
+        limit #{beginCount}, #{pageCount}
+    </select>
+
+    <select id="selectShareListTotalCount" resultType="java.lang.Integer">
+        SELECT count(*) FROM share a
+        LEFT JOIN sharefile b ON b.share_batch_num = a.share_batch_num
+        LEFT JOIN userfile c ON c.user_file_id = b.user_file_id
+        LEFT JOIN file d ON d.file_id = c.file_id
+        WHERE share_file_path = #{shareFilePath}
+        <if test="shareBatchNum != null">
+            AND a.share_batch_num = #{shareBatchNum}
+        </if>
+        AND c.user_id = #{userId}
+    </select>
+
+
+</mapper>

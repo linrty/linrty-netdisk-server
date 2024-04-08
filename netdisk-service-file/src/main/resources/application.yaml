@@ -1,0 +1,17 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: netdisk-service-file # 服务名称
+  profiles:
+    active: dev
+
+netdisk:
+  swagger:
+      title: 网盘文件服务接口文档
+      description: 网盘文件服务接口文档
+      package: top.linrty.netdisk.file.controller # 扫描的包路径
+  dbname: netdisk_file
+
+
+

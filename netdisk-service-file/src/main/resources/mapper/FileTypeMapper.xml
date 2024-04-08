@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.linrty.netdisk.file.mapper.FileTypeMapper">
+
+    <select id="selectExtendNameByFileType" parameterType="java.lang.String" resultType="java.lang.String">
+        select file_extend_name from fileclassification
+        <where>
+            <choose>
+                <when test="fileTypeId != 5">
+                    file_type_id = #{fileTypeId}
+                </when>
+                <otherwise>
+                    file_type_id not in (1,2,3,4)
+                </otherwise>
+
+            </choose>
+        </where>
+    </select>
+
+</mapper>
