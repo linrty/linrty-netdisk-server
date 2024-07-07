@@ -57,6 +57,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
