@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import top.linrty.netdisk.common.domain.dto.RestResult;
 import top.linrty.netdisk.user.domain.po.Role;
 import top.linrty.netdisk.user.domain.po.UserBean;
-import top.linrty.netdisk.user.domain.vo.UserLoginVO;
+import top.linrty.netdisk.common.domain.vo.user.UserLoginVO;
 
 import java.util.List;
 

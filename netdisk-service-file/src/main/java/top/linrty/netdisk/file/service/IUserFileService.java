@@ -2,16 +2,11 @@ package top.linrty.netdisk.file.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.stereotype.Service;
-import top.linrty.netdisk.common.domain.po.NetdiskFile;
-import top.linrty.netdisk.common.domain.po.UserFileInfo;
 import top.linrty.netdisk.file.domain.po.TreeNode;
 import top.linrty.netdisk.file.domain.po.UserFile;
-import top.linrty.netdisk.file.domain.vo.FileListVO;
+import top.linrty.netdisk.common.domain.vo.file.FileListVO;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public interface IUserFileService extends IService<UserFile> {
     IPage<FileListVO> userFileList(String userId, String filePath, Long currentPage, Long pageCount);

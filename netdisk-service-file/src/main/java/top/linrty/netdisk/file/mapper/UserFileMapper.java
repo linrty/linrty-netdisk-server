@@ -3,10 +3,9 @@ package top.linrty.netdisk.file.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mysql.cj.exceptions.StreamingNotifiable;
 import org.apache.ibatis.annotations.Param;
 import top.linrty.netdisk.file.domain.po.UserFile;
-import top.linrty.netdisk.file.domain.vo.FileListVO;
+import top.linrty.netdisk.common.domain.vo.file.FileListVO;
 
 import java.util.List;
 

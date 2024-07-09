@@ -10,10 +10,10 @@ import top.linrty.netdisk.common.anno.MyLog;
 import top.linrty.netdisk.common.domain.dto.RestResult;
 import top.linrty.netdisk.common.exception.UserException;
 import top.linrty.netdisk.common.util.UserContext;
-import top.linrty.netdisk.user.domain.dto.RegisterDTO;
+import top.linrty.netdisk.common.domain.dto.user.RegisterDTO;
 import top.linrty.netdisk.user.domain.po.UserBean;
 import top.linrty.netdisk.user.domain.po.UserLoginInfo;
-import top.linrty.netdisk.user.domain.vo.UserLoginVO;
+import top.linrty.netdisk.common.domain.vo.user.UserLoginVO;
 import top.linrty.netdisk.user.service.IUserLoginInfoService;
 import top.linrty.netdisk.user.service.IUserService;
 

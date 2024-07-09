@@ -7,7 +7,7 @@
 <mapper namespace="top.linrty.netdisk.notice.mapper.NoticeMapper">
 
 
-    <select id="selectPageVo" parameterType="top.linrty.netdisk.notice.domain.dto.NoticeListDTO"
+    <select id="selectPageVo" parameterType="top.linrty.netdisk.common.domain.dto.notice.NoticeListDTO"
             resultType="top.linrty.netdisk.notice.domain.po.Notice">
         select * from notice
         <where>

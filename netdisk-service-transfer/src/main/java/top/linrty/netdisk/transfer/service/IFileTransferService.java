@@ -1,10 +1,9 @@
 package top.linrty.netdisk.transfer.service;
 
-import org.springframework.web.bind.annotation.RequestParam;
-import top.linrty.netdisk.transfer.domain.dto.DownloadFileDTO;
-import top.linrty.netdisk.transfer.domain.dto.PreviewDTO;
-import top.linrty.netdisk.transfer.domain.dto.UploadFileChunkDTO;
-import top.linrty.netdisk.transfer.domain.vo.UploadFileVO;
+import top.linrty.netdisk.common.domain.dto.transfer.DownloadFileDTO;
+import top.linrty.netdisk.common.domain.dto.transfer.PreviewDTO;
+import top.linrty.netdisk.common.domain.dto.transfer.UploadFileChunkDTO;
+import top.linrty.netdisk.common.domain.vo.transfer.UploadFileVO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

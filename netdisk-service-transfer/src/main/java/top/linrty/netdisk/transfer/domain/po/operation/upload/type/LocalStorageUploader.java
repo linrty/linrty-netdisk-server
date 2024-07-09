@@ -12,8 +12,8 @@ import top.linrty.netdisk.common.exception.FileOperationException;
 import top.linrty.netdisk.common.util.FileTypeUtil;
 import top.linrty.netdisk.transfer.domain.po.operation.upload.Uploader;
 import top.linrty.netdisk.transfer.domain.po.operation.upload.entity.UploadFileChunk;
-import top.linrty.netdisk.transfer.domain.vo.UploadFileResult;
-import top.linrty.netdisk.transfer.enums.UploadFileStatusEnum;
+import top.linrty.netdisk.common.domain.vo.transfer.UploadFileResult;
+import top.linrty.netdisk.common.enums.UploadFileStatusEnum;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

@@ -18,12 +18,11 @@ import top.linrty.netdisk.file.api.TransferClient;
 import top.linrty.netdisk.file.domain.po.FileBean;
 import top.linrty.netdisk.file.domain.po.RecoveryFile;
 import top.linrty.netdisk.file.domain.po.UserFile;
-import top.linrty.netdisk.file.domain.vo.RecoveryFileListVO;
+import top.linrty.netdisk.common.domain.vo.file.RecoveryFileListVO;
 import top.linrty.netdisk.file.mapper.FileMapper;
 import top.linrty.netdisk.file.mapper.RecoveryFileMapper;
 import top.linrty.netdisk.file.mapper.UserFileMapper;
 import top.linrty.netdisk.file.service.IRecoveryFileService;
-import top.linrty.netdisk.file.service.IUserFileService;
 
 import javax.annotation.Resource;
 import java.util.List;

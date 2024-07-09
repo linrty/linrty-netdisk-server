@@ -6,7 +6,7 @@
 
 <mapper namespace="top.linrty.netdisk.file.mapper.ShareFileMapper">
 
-    <select id="selectShareFileList" resultType="top.linrty.netdisk.file.domain.vo.ShareFileListVO">
+    <select id="selectShareFileList" resultType="top.linrty.netdisk.common.domain.vo.file.ShareFileListVO">
         select * from share_file a
         LEFT JOIN share ON share.share_batch_num = a.share_batch_num
         where a.share_batch_num = #{shareBatchNum}

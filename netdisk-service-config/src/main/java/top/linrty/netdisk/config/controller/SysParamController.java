@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import top.linrty.netdisk.common.domain.dto.RestResult;
-import top.linrty.netdisk.config.domain.dto.QueryGroupParamDTO;
+import top.linrty.netdisk.common.domain.dto.config.QueryGroupParamDTO;
 import top.linrty.netdisk.config.domain.po.SysParam;
 import top.linrty.netdisk.config.service.ISysParamService;
 

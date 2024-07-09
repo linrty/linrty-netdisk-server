@@ -6,6 +6,7 @@ import top.linrty.netdisk.file.domain.po.Music;
 
 
 @Data
+// TODO 添加内部成员Music和Image对应的VO类，迁移到common模块中
 public class FileDetailVO {
     private String fileId;
 
@@ -24,7 +25,6 @@ public class FileDetailVO {
     private String userFileId;
 
     private Long userId;
-
 
     private String fileName;
 

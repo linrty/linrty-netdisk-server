@@ -6,6 +6,7 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.web.bind.annotation.*;
 import top.linrty.netdisk.common.anno.MyLog;
 import top.linrty.netdisk.common.domain.dto.RestResult;
+import top.linrty.netdisk.common.domain.dto.transfer.*;
 import top.linrty.netdisk.common.domain.po.NetdiskFile;
 import top.linrty.netdisk.common.exception.FileOperationException;
 import top.linrty.netdisk.common.exception.UserException;
@@ -13,16 +14,14 @@ import top.linrty.netdisk.common.util.FileTypeUtil;
 import top.linrty.netdisk.common.util.MimeUtils;
 import top.linrty.netdisk.common.util.UserContext;
 import top.linrty.netdisk.transfer.api.FileClient;
-import top.linrty.netdisk.transfer.domain.dto.*;
 import top.linrty.netdisk.transfer.domain.po.Range;
 import top.linrty.netdisk.transfer.domain.po.operation.download.Downloader;
 import top.linrty.netdisk.transfer.domain.po.operation.download.entity.DownloadFile;
-import top.linrty.netdisk.transfer.domain.vo.UploadFileVO;
+import top.linrty.netdisk.common.domain.vo.transfer.UploadFileVO;
 import top.linrty.netdisk.transfer.service.IFileTransferService;
 import top.linrty.netdisk.transfer.util.FileStorageFactory;
 
 import javax.annotation.Resource;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -30,7 +29,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @Slf4j
 // @Tag(name = "filetransfer", description = "该接口为文件传输接口，主要用来做文件的上传、下载和预览")

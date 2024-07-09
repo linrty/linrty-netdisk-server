@@ -1,16 +1,13 @@
 package top.linrty.netdisk.file.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import top.linrty.netdisk.common.anno.MyLog;
 import top.linrty.netdisk.common.domain.dto.RestResult;
-import top.linrty.netdisk.common.util.UserContext;
-import top.linrty.netdisk.file.domain.dto.BatchDeleteRecoveryFileDTO;
-import top.linrty.netdisk.file.domain.dto.DeleteRecoveryFileDTO;
-import top.linrty.netdisk.file.domain.dto.RestoreFileDTO;
-import top.linrty.netdisk.file.domain.po.RecoveryFile;
-import top.linrty.netdisk.file.domain.vo.RecoveryFileListVO;
+import top.linrty.netdisk.common.domain.dto.file.BatchDeleteRecoveryFileDTO;
+import top.linrty.netdisk.common.domain.dto.file.DeleteRecoveryFileDTO;
+import top.linrty.netdisk.common.domain.dto.file.RestoreFileDTO;
+import top.linrty.netdisk.common.domain.vo.file.RecoveryFileListVO;
 import top.linrty.netdisk.file.service.IRecoveryFileService;
 
 import javax.annotation.Resource;

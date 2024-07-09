@@ -2,7 +2,7 @@ package top.linrty.netdisk.file.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import top.linrty.netdisk.file.domain.po.Share;
-import top.linrty.netdisk.file.domain.vo.ShareListVO;
+import top.linrty.netdisk.common.domain.vo.file.ShareListVO;
 
 import java.util.List;
 

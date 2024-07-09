@@ -12,7 +12,7 @@ import top.linrty.netdisk.common.exception.FileOperationException;
 import top.linrty.netdisk.common.util.RedisLock;
 import top.linrty.netdisk.common.util.RedisUtil;
 import top.linrty.netdisk.transfer.domain.po.operation.upload.entity.UploadFileChunk;
-import top.linrty.netdisk.transfer.domain.vo.UploadFileResult;
+import top.linrty.netdisk.common.domain.vo.transfer.UploadFileResult;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;

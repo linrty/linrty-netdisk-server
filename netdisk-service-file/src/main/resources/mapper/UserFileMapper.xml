@@ -6,7 +6,7 @@
 
 <mapper namespace="top.linrty.netdisk.file.mapper.UserFileMapper">
 
-    <select id="selectPageVo" parameterType="top.linrty.netdisk.file.domain.po.UserFile" resultType="top.linrty.netdisk.file.domain.vo.FileListVO">
+    <select id="selectPageVo" parameterType="top.linrty.netdisk.file.domain.po.UserFile" resultType="top.linrty.netdisk.common.domain.vo.file.FileListVO">
         select * from user_file a
         left join image on a.file_id = image.file_id
         left join file on file.file_id = a.file_id

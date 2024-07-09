@@ -14,8 +14,8 @@ import top.linrty.netdisk.transfer.domain.po.NetdiskMultipartFile;
 import top.linrty.netdisk.common.util.RedisUtil;
 import top.linrty.netdisk.transfer.domain.po.operation.upload.Uploader;
 import top.linrty.netdisk.transfer.domain.po.operation.upload.entity.UploadFileChunk;
-import top.linrty.netdisk.transfer.domain.vo.UploadFileResult;
-import top.linrty.netdisk.transfer.enums.UploadFileStatusEnum;
+import top.linrty.netdisk.common.domain.vo.transfer.UploadFileResult;
+import top.linrty.netdisk.common.enums.UploadFileStatusEnum;
 
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;

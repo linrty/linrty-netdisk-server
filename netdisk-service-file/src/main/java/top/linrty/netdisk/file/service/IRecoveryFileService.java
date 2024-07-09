@@ -2,7 +2,7 @@ package top.linrty.netdisk.file.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.linrty.netdisk.file.domain.po.RecoveryFile;
-import top.linrty.netdisk.file.domain.vo.RecoveryFileListVO;
+import top.linrty.netdisk.common.domain.vo.file.RecoveryFileListVO;
 
 import java.util.List;
 

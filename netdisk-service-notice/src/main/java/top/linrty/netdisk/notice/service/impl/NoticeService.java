@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import top.linrty.netdisk.notice.domain.dto.NoticeListDTO;
+import top.linrty.netdisk.common.domain.dto.notice.NoticeListDTO;
 import top.linrty.netdisk.notice.domain.po.Notice;
 import top.linrty.netdisk.notice.mapper.NoticeMapper;
 import top.linrty.netdisk.notice.service.INoticeService;

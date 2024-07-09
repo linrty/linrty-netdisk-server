@@ -1,6 +1,5 @@
 package top.linrty.netdisk.file.service.impl;
 
-import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.net.URLDecoder;
 import cn.hutool.core.util.IdUtil;
@@ -16,11 +15,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import top.linrty.netdisk.common.constant.FileConstants;
 import top.linrty.netdisk.common.constant.MQConstants;
 import top.linrty.netdisk.common.domain.po.NetdiskFile;
-import top.linrty.netdisk.common.domain.po.UserFileInfo;
 import top.linrty.netdisk.common.exception.DBException;
 import top.linrty.netdisk.common.exception.FileOperationException;
 import top.linrty.netdisk.common.util.RabbitMqHelper;
@@ -29,7 +26,7 @@ import top.linrty.netdisk.file.domain.po.FileBean;
 import top.linrty.netdisk.file.domain.po.RecoveryFile;
 import top.linrty.netdisk.file.domain.po.TreeNode;
 import top.linrty.netdisk.file.domain.po.UserFile;
-import top.linrty.netdisk.file.domain.vo.FileListVO;
+import top.linrty.netdisk.common.domain.vo.file.FileListVO;
 import top.linrty.netdisk.file.mapper.FileMapper;
 import top.linrty.netdisk.file.mapper.RecoveryFileMapper;
 import top.linrty.netdisk.file.mapper.UserFileMapper;

@@ -20,7 +20,7 @@ import top.linrty.netdisk.common.util.PasswordUtil;
 import top.linrty.netdisk.user.util.JwtTool;
 import top.linrty.netdisk.user.domain.po.UserBean;
 import top.linrty.netdisk.user.domain.po.Role;
-import top.linrty.netdisk.user.domain.vo.UserLoginVO;
+import top.linrty.netdisk.common.domain.vo.user.UserLoginVO;
 import top.linrty.netdisk.user.mapper.UserMapper;
 import top.linrty.netdisk.user.service.IUserService;
 

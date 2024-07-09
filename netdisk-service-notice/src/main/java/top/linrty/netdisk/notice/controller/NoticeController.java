@@ -3,7 +3,7 @@ package top.linrty.netdisk.notice.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.web.bind.annotation.*;
 import top.linrty.netdisk.common.domain.dto.RestResult;
-import top.linrty.netdisk.notice.domain.dto.NoticeListDTO;
+import top.linrty.netdisk.common.domain.dto.notice.NoticeListDTO;
 
 import top.linrty.netdisk.notice.domain.po.Notice;
 import top.linrty.netdisk.notice.service.INoticeService;

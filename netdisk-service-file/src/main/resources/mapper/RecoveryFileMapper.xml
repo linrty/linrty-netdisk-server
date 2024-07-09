@@ -6,7 +6,7 @@
 
 <mapper namespace="top.linrty.netdisk.file.mapper.RecoveryFileMapper">
 
-    <select id="selectRecoveryFileList" resultType="top.linrty.netdisk.file.domain.vo.RecoveryFileListVO">
+    <select id="selectRecoveryFileList" resultType="top.linrty.netdisk.common.domain.vo.file.RecoveryFileListVO">
         SELECT * FROM recovery_file a
         LEFT JOIN user_file b ON a.user_file_id = b.user_file_id
         left join file c on c.file_id = b.file_id

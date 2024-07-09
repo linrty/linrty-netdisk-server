@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.linrty.netdisk.file.domain.po.ShareFile;
-import top.linrty.netdisk.file.domain.vo.ShareFileListVO;
+import top.linrty.netdisk.common.domain.vo.file.ShareFileListVO;
 import top.linrty.netdisk.file.mapper.ShareFileMapper;
 import top.linrty.netdisk.file.service.IShareFileService;
 
