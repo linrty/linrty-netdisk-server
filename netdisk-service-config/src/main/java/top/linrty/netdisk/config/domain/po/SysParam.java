@@ -17,12 +17,16 @@ public class SysParam {
     @Column(columnDefinition = "bigint(20)")
     @TableId(type = IdType.AUTO)
     private Long sysParamId;
+
     @Column(columnDefinition = "varchar(50)")
     private String groupName;
+
     @Column(columnDefinition = "varchar(50)")
     private String sysParamKey;
+
     @Column(columnDefinition = "varchar(50)")
     private String sysParamValue;
+
     @Column(columnDefinition = "varchar(50)")
     private String sysParamDesc;
 }

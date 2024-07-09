@@ -9,16 +9,18 @@ import javax.persistence.*;
 
 
 @Data
-@Table(name = "userlogininfo")
+@Table(name = "user_login_info")
 @Entity
-@TableName("userlogininfo")
+@TableName("user_login_info")
 public class UserLoginInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @TableId(type = IdType.AUTO)
     private Long userLoginId;
+
     @Column(columnDefinition = "varchar(30) comment '用户登录日期'")
     private String userloginDate;
+
     @Column(columnDefinition = "varchar(20) comment '用户id'")
     private String userId;
 }

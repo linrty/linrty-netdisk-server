@@ -8,8 +8,8 @@
 
     <select id="selectShareList" resultType="top.linrty.netdisk.file.domain.vo.ShareListVO">
         SELECT * FROM share a
-        LEFT JOIN sharefile b ON b.share_batch_num = a.share_batch_num
-        LEFT JOIN userfile c ON c.user_file_id = b.user_file_id
+        LEFT JOIN share_file b ON b.share_batch_num = a.share_batch_num
+        LEFT JOIN user_file c ON c.user_file_id = b.user_file_id
         LEFT JOIN file d ON d.file_id = c.file_id
         WHERE share_file_path = #{shareFilePath}
         <if test="shareBatchNum != null">
@@ -22,8 +22,8 @@
 
     <select id="selectShareListTotalCount" resultType="java.lang.Integer">
         SELECT count(*) FROM share a
-        LEFT JOIN sharefile b ON b.share_batch_num = a.share_batch_num
-        LEFT JOIN userfile c ON c.user_file_id = b.user_file_id
+        LEFT JOIN share_file b ON b.share_batch_num = a.share_batch_num
+        LEFT JOIN user_file c ON c.user_file_id = b.user_file_id
         LEFT JOIN file d ON d.file_id = c.file_id
         WHERE share_file_path = #{shareFilePath}
         <if test="shareBatchNum != null">

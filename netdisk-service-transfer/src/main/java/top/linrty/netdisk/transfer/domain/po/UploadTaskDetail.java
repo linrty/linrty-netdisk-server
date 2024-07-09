@@ -29,11 +29,13 @@ public class UploadTaskDetail {
 
     @Column(columnDefinition="bigint(10) comment '当前分片大小'")
     private Integer chunkSize;
+
     @Column(columnDefinition="varchar(500) comment '文件相对路径'")
     private String relativePath;
 
     @Column(columnDefinition="int(5) comment '文件总分片数'")
     private Integer totalChunks;
+
     @Column(columnDefinition="bigint(10) comment '文件总大小'")
     private Integer totalSize;
 

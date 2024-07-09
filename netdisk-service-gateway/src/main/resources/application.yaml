@@ -8,22 +8,32 @@ spring:
           uri: lb://netdisk-service-user # 路由的目标服务，lb代表负载均衡，会从注册中心拉取服务列表
           predicates: # 路由断言，判断当前请求是否符合当前规则，符合则路由到目标服务
             - Path=/user/** # 这里是以请求路径作为判断规则
+          filters:
+            - StripPrefix=1
         - id: notice
           uri: lb://netdisk-service-notice
           predicates:
               - Path=/notice/**
+          filters:
+            - StripPrefix=1
         - id: config
           uri: lb://netdisk-service-config
           predicates:
               - Path=/param/**
+          filters:
+            - StripPrefix=1
         - id: file
           uri: lb://netdisk-service-file
           predicates:
               - Path=/file/**, /storage/**, /recoveryfile/**, /share/**
+          filters:
+            - StripPrefix=1
         - id: transfer
           uri: lb://netdisk-service-transfer
           predicates:
               - Path=/filetransfer/**
+          filters:
+            - StripPrefix=1
 netdisk:
   auth:
     excludePaths:
@@ -35,6 +45,7 @@ netdisk:
       - /webjars/**
       - /**/swagger-resources/**
       - /**/swagger-ui.html
-      - /**/v2/api-docs
+      - /v3/api-docs/**
+      - /**/v3/api-docs/**
       - /img.icons/**
       - /filetransfer/preview**

@@ -15,11 +15,11 @@ import top.linrty.netdisk.common.domain.po.UserFileInfo;
 import javax.persistence.*;
 
 @Data
-@Table(name = "userfile", uniqueConstraints = {
+@Table(name = "user_file", uniqueConstraints = {
         @UniqueConstraint(name = "fileindex", columnNames = {"userId", "filePath", "fileName", "extendName", "deleteFlag", "isDir"})
 })
 @Entity
-@TableName("userfile")
+@TableName("user_file")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -59,12 +59,16 @@ public class UserFile {
 
     @Column(columnDefinition = "varchar(50) comment '删除批次号'")
     private String deleteBatchNum;
+
     @Column(columnDefinition="varchar(30) comment '创建时间'")
     private String createTime;
+
     @Column(columnDefinition="varchar(20) comment '创建用户id'")
     private String createUserId;
+
     @Column(columnDefinition="varchar(30) comment '修改时间'")
     private String modifyTime;
+
     @Column(columnDefinition="varchar(20) comment '修改用户id'")
     private String modifyUserId;
 

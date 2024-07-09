@@ -8,9 +8,9 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Table(name = "picturefile")
+@Table(name = "picture_file")
 @Entity
-@TableName("picturefile")
+@TableName("picture_file")
 public class PictureFile {
 
     @Id

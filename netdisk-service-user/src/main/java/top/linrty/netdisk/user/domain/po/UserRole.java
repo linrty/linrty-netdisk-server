@@ -16,6 +16,10 @@ public class UserRole {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @TableId(type = IdType.AUTO)
     private Long userRoleId;
+
+    @Column(columnDefinition = "varchar(20) comment '用户id'")
     private String userId;
+
+    @Column(columnDefinition="bigint(20) comment '角色id'")
     private Long roleId;
 }

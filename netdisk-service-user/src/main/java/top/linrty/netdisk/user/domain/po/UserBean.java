@@ -74,10 +74,13 @@ public class UserBean {
 
     @Column(columnDefinition = "int(2) comment '是否可用(0-不可用,1-可用)'")
     private Integer available;
+
     @Column(columnDefinition = "varchar(30) comment '修改时间'")
     private String modifyTime;
+
     @Column(columnDefinition = "bigint(20) comment '修改用户id'")
     private Long modifyUserId;
+
     @Column(columnDefinition = "varchar(28) comment 'open id'")
     private String wxOpenId;
 

@@ -7,17 +7,17 @@
 <mapper namespace="top.linrty.netdisk.file.mapper.UserFileMapper">
 
     <select id="selectPageVo" parameterType="top.linrty.netdisk.file.domain.po.UserFile" resultType="top.linrty.netdisk.file.domain.vo.FileListVO">
-        select * from userfile a
+        select * from user_file a
         left join image on a.file_id = image.file_id
         left join file on file.file_id = a.file_id
         <where>
             <if test="fileTypeId != null">
                 <choose>
                     <when test="fileTypeId != 5">
-                        extend_name in (select file_extend_name from fileclassification where file_type_id = #{fileTypeId})
+                        extend_name in (select file_extend_name from file_classification where file_type_id = #{fileTypeId})
                     </when>
                     <otherwise>
-                        extend_name not in (select file_extend_name from fileclassification where file_type_id in (1, 2, 3, 4))
+                        extend_name not in (select file_extend_name from file_classification where file_type_id in (1, 2, 3, 4))
                     </otherwise>
                 </choose>
                 and a.is_dir = 0
@@ -43,24 +43,24 @@
     </select>
 
     <select id="selectUserFileByLikeRightFilePath" resultType="top.linrty.netdisk.file.domain.po.UserFile">
-        select * from userfile
+        select * from user_file
         where (file_path = #{filePath} or file_path like concat(#{filePath},'/%')) and user_id = #{userId} and delete_flag = 0
     </select>
 
     <select id="selectStorageSizeByUserId" resultType="java.lang.Long" parameterType="java.lang.String">
-        SELECT SUM(file_size) FROM userfile
-        LEFT JOIN file ON file.file_id = userfile.file_id
-        WHERE userfile.user_id = #{userId}
+        SELECT SUM(file_size) FROM user_file
+        LEFT JOIN file ON file.file_id = user_file.file_id
+        WHERE user_file.user_id = #{userId}
     </select>
 
 
     <select id="selectFilePointCount" parameterType="java.lang.String" resultType="java.lang.Long">
-        select count(*) from userfile
+        select count(*) from user_file
         where file_id = #{fileId}
     </select>
 
     <select id="selectRepeatUserFile" parameterType="java.lang.String" resultType="top.linrty.netdisk.file.domain.po.UserFile">
-        select file_name, file_path from userfile
+        select file_name, file_path from user_file
         where  user_id = #{userId} and file_path like #{filePath} and is_dir = 1 and delete_flag = 0
         group by file_name, file_path
         having count(file_name) >= 2

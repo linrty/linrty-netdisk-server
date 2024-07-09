@@ -11,15 +11,17 @@ import javax.persistence.*;
 @Data
 @Table(name = "fileextend")
 @Entity
-@TableName("fileextend")
+@TableName("file_extend")
 public class FileExtend {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @TableId(type = IdType.AUTO)
     @Column(columnDefinition="varchar(25)")
     private String fileExtendName;
+
     @Column(columnDefinition="varchar(25) comment '文件扩展名描述'")
     private String fileExtendDesc;
+
     @Column(columnDefinition="varchar(100) comment '文件扩展名预览图'")
     private String fileExtendImgUrl;
 }

@@ -25,10 +25,10 @@ public class Permission {
     private Long parentId;
 
     @Column(columnDefinition="varchar(30) comment '权限名称'")
-    private String permissionName;//名称.
+    private String permissionName;
 
     @Column(columnDefinition="int(2) comment '资源类型'")
-    private Integer resourceType;//资源类型
+    private Integer resourceType;
 
     @Column(columnDefinition="varchar(30) comment '权限标识码'")
     private String permissionCode;
@@ -38,10 +38,13 @@ public class Permission {
 
     @Column(columnDefinition="varchar(30) comment '创建时间'")
     private String createTime;
+
     @Column(columnDefinition="bigint(20) comment '创建用户id'")
     private Long createUserId;
+
     @Column(columnDefinition="varchar(30) comment '修改时间'")
     private String modifyTime;
+
     @Column(columnDefinition="bigint(20) comment '修改用户id'")
     private Long modifyUserId;
 

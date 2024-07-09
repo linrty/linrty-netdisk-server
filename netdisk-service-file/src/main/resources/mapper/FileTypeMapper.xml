@@ -7,7 +7,7 @@
 <mapper namespace="top.linrty.netdisk.file.mapper.FileTypeMapper">
 
     <select id="selectExtendNameByFileType" parameterType="java.lang.String" resultType="java.lang.String">
-        select file_extend_name from fileclassification
+        select file_extend_name from file_classification
         <where>
             <choose>
                 <when test="fileTypeId != 5">

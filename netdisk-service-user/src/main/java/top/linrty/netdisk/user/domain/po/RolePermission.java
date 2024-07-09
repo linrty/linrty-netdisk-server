@@ -17,8 +17,10 @@ public class RolePermission {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @TableId(type = IdType.AUTO)
     private Long id;
+
     @Column(columnDefinition="bigint(20) comment '角色id'")
     private Long roleId;
+
     @Column(columnDefinition="bigint(20) comment '权限id'")
     private Long permissionId;
 }

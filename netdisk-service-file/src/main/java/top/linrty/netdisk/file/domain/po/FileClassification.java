@@ -8,17 +8,19 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Table(name = "fileclassification")
+@Table(name = "file_classification")
 @Entity
-@TableName("fileclassification")
+@TableName("file_classification")
 public class FileClassification {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @TableId(type = IdType.AUTO)
     @Column(columnDefinition="bigint(20)")
     private Long fileClassificationId;
+
     @Column(columnDefinition="bigint(20) comment '文件类型id'")
     private Integer fileTypeId;
+
     @Column(columnDefinition="varchar(25) comment '文件扩展名'")
     private String fileExtendName;
 }

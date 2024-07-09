@@ -32,10 +32,13 @@ public class Role {
 
     @Column(columnDefinition="varchar(30) comment '创建时间'")
     private String createTime;
+
     @Column(columnDefinition="bigint(20) comment '创建用户id'")
     private Long createUserId;
+
     @Column(columnDefinition="varchar(30) comment '修改时间'")
     private String modifyTime;
+
     @Column(columnDefinition="bigint(20) comment '修改用户id'")
     private Long modifyUserId;
 
